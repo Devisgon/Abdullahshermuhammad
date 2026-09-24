@@ -1,0 +1,54 @@
+name: Deploy website to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v6
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Require lead form endpoint
+        env:
+          NEXT_PUBLIC_LEAD_FORM_ENDPOINT: ${{ vars.NEXT_PUBLIC_LEAD_FORM_ENDPOINT }}
+        run: |
+          if [ -z "$NEXT_PUBLIC_LEAD_FORM_ENDPOINT" ]; then
+            echo 'Create a form endpoint and set the NEXT_PUBLIC_LEAD_FORM_ENDPOINT repository variable before publishing.'
+            exit 1
+          fi
+      - name: Build static site
+        env:
+          NEXT_PUBLIC_LEAD_FORM_ENDPOINT: ${{ vars.NEXT_PUBLIC_LEAD_FORM_ENDPOINT }}
+        run: pnpm build
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ./out
+      - name: Publish
+        id: deployment
+        uses: actions/deploy-pages@v4
