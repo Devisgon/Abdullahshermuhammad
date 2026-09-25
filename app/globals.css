@@ -73,3 +73,29 @@ h1 em,h2 em{color:#a71a7f}
 @media(max-width:900px){.desktop-nav{display:none!important}.mobile-menu-button{display:grid;place-items:center;width:43px;height:43px;border:1px solid #d8c4de;border-radius:5px;background:#fff;color:#40005b}.mobile-menu-backdrop{display:block;position:fixed;inset:84px 0 0;z-index:19;border:0;background:#1c082770}.mobile-menu-panel{display:flex;position:absolute;top:84px;right:0;width:min(390px,100vw);max-height:calc(100dvh - 84px);overflow:auto;z-index:21;flex-direction:column;background:#fff;box-shadow:0 22px 50px #21002d27;padding:18px 28px 35px}.mobile-menu-panel a{display:flex;align-items:center;justify-content:space-between;min-height:45px;border-bottom:1px solid #eee4f0;color:#32283a;font-size:15px;font-weight:600}.mobile-menu-panel a:hover{color:#a71a7f}.mobile-menu-panel a:first-child,.mobile-menu-panel a:nth-child(9){font-weight:800;color:#40005b}.hero{grid-template-columns:1fr;max-width:700px;padding-block:75px}.hero-visual{height:620px}.hero-person,.hero-visual .hero-person{right:0}.people-feature-grid{gap:40px}}
 @media(max-width:760px){.header-inner{height:70px}.mobile-menu-panel{top:70px;max-height:calc(100dvh - 70px)}.mobile-menu-backdrop{inset:70px 0 0}.hero{padding-block:54px 72px;gap:45px}.hero-visual{height:510px}.hero-person,.hero-visual .hero-person{right:-3%}.people-feature{padding-block:75px}.people-feature-image{height:460px}.industry-directory{grid-template-columns:1fr}}
 @media(max-width:520px){.brand-copy strong{font-size:11px}.brand-copy small{font-size:7px}.brand-symbol{width:36px;height:36px;font-size:13px}.header-cta{font-size:11px}.hero-visual{height:440px}.hero-person,.hero-visual .hero-person{right:-18%}.hero-visual-heading,.hero-visual-footer{left:17px;right:17px;font-size:8px}.hero-visual-footer .illustration-label{font-size:8px}.people-feature-image{height:380px}.industry-directory-card{padding:26px;min-height:265px}}
+/* Fill more of the hero card with the portrait */
+.hero-visual .hero-person {
+  height: 125%;
+  width: auto;
+  max-height: none;
+  right: -3%;
+  bottom: -25%;
+  object-fit: contain;
+  object-position: bottom right;
+}
+
+@media (max-width: 900px) {
+  .hero-visual .hero-person {
+    height: 118%;
+    right: -4%;
+    bottom: -18%;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero-visual .hero-person {
+    height: 112%;
+    right: -8%;
+    bottom: -12%;
+  }
+}
