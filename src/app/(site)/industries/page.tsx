@@ -3,7 +3,7 @@ import { createPageMetadata } from '@/lib/seo';
 import { PageIntro } from '@/components/ui/PageIntro';
 import { IndustryDirectory } from '@/features/industries/components/IndustryDirectory';
 
-export const metadata: Metadata = createPageMetadata({ title: 'Industries', description: 'Practical AI automation for home services, HVAC, roofing and plumbing teams.', path: '/industries/' });
+export const metadata: Metadata = createPageMetadata({ title: 'AI Automation for HVAC, Roofing and Plumbing', description: 'See practical call answering and lead follow-up workflows for HVAC, roofing, plumbing and other home service businesses.', path: '/industries/' });
 
 export default function IndustriesPage() {
   return <main>

@@ -3,7 +3,7 @@ import { createPageMetadata } from '@/lib/seo';
 import { PageIntro } from '@/components/ui/PageIntro';
 import { ServiceDirectory } from '@/features/services/components/ServiceDirectory';
 
-export const metadata: Metadata = createPageMetadata({ title: 'AI Automation Services', description: 'Explore AI call handling, lead follow-up, customer support, agents, workflow automation and custom systems.', path: '/services/' });
+export const metadata: Metadata = createPageMetadata({ title: 'AI Automation Services for Business', description: 'Explore AI receptionist, lead follow-up, workflow integration, customer support and custom AI systems for service businesses.', path: '/services/' });
 
 export default function ServicesPage() {
   return <main>

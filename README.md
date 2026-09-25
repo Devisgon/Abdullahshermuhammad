@@ -33,6 +33,8 @@ public/                           # Logo, favicon, portraits and CNAME
 
 The header logo is `public/ASM-LOGO.png`. Homepage content begins in `src/app/(site)/page.tsx`, which imports named sections from `src/features/home/components/`. Change service copy in `src/content/offers.ts`, industry copy in `src/content/industries.ts`, and menu items in `src/content/navigation.ts`.
 
+**Search content:** `src/content/seo-targets.ts` maps the distinct search intent and visible explanation for every service and industry landing page. `src/lib/seo.ts` builds canonical and social metadata; `src/app/sitemap.ts` and `src/app/robots.ts` expose discoverable URLs. The research, market limits and page-by-page keyword map are in `SEO_RESEARCH_REPORT.md`.
+
 **Social preview image:** Add a 1200 × 630 PNG named `og-image.png` at `public/images/og-image.png`. Every page uses that image for Open Graph and X/Twitter previews. Page titles, descriptions and canonical URLs are generated through `src/lib/seo.ts` and the page metadata. Preview images will not appear in shared links until this file is uploaded and deployed. The image URL is `https://abdullahshermuhammad.me/images/og-image.png`.
 
 ## Run locally
