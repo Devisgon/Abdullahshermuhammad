@@ -1,0 +1,17 @@
+import type { Metadata } from 'next';
+import { ArrowUpRight } from 'lucide-react';
+import { PageIntro } from '@/components/ui/PageIntro';
+import { ButtonLink } from '@/components/ui/ButtonLink';
+import { Container } from '@/components/ui/Container';
+import { PartnershipProcess } from '@/features/partners/components/PartnershipProcess';
+
+export const metadata: Metadata = { title: 'Agency Partnerships', description: 'White-label technical delivery for agencies selling AI automation, voice, integrations and custom software.' };
+export default function PartnersPage() {
+  return <main>
+    <PageIntro eyebrow="FOR AGENCIES" title="You own the client relationship." highlight="We build the system.">Need technical delivery for an AI automation, voice, integration or custom software project? I lead implementation with the team at Devisgon.</PageIntro>
+    <Container className="pb-20">
+      <ButtonLink>Discuss a delivery project <ArrowUpRight size={18} /></ButtonLink>
+    </Container>
+    <PartnershipProcess />
+  </main>;
+}

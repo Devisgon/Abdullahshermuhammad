@@ -1,8 +1,0 @@
-import type { Metadata } from 'next';
-import Link from 'next/link';
-import { ArrowUpRight } from 'lucide-react';
-import { SiteHeader,SiteFooter,AssessmentLink } from '../site-components';
-import { offers } from '../../lib/offer-pages';
-export const metadata:Metadata={title:'AI Automation Services',description:'Explore AI call handling, lead follow-up, customer support, agents, workflow automation and custom systems.'};
-const paths=['ai-receptionist','lead-follow-up','ai-automation','ai-chatbot','ai-agents','custom-ai-systems','ai-call-agents'];
-export default function Services(){return <><SiteHeader/><main className="wrap"><div className="page-hero"><p className="eyebrow">WHAT I BUILD</p><h1>Choose the bottleneck. <em>Build the next step.</em></h1><p>These are starting points. The system itself is shaped around your team, existing tools and business rules.</p></div><section className="interior-section"><div className="service-grid">{paths.map((path,i)=><Link className="service-card" href={'/'+path} key={path}><div className="service-top"><span className="service-number">0{i+1}</span><ArrowUpRight size={20}/></div><div><h3>{offers[path].eyebrow.toLowerCase().replace(/(^|\s)\S/g,s=>s.toUpperCase())}</h3><p>{offers[path].description}</p></div><span className="service-link">Explore this workflow <ArrowUpRight size={17}/></span></Link>)}</div><div className="interior-banner"><h2>Not sure which fits?</h2><p>Describe your slowest workflow and I’ll identify a practical place to start.</p><AssessmentLink light>Find my automation opportunities <ArrowUpRight size={18}/></AssessmentLink></div></section></main><SiteFooter/></>}
