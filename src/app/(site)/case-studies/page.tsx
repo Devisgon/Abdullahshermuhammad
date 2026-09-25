@@ -1,0 +1,11 @@
+import type { Metadata } from 'next';
+import { PageIntro } from '@/components/ui/PageIntro';
+import { CapstoneFeature } from '@/features/case-studies/components/CapstoneFeature';
+
+export const metadata: Metadata = { title: 'Selected Work', description: 'A transparent look at Abdullah Sher Muhammad’s workflow and AI system work, including a university project in development.' };
+export default function CaseStudiesPage() {
+  return <main>
+    <PageIntro eyebrow="SELECTED WORK" title="Systems with a clear job" highlight="and a human handoff.">I share work when I can describe it accurately. This page includes a university system in development; it does not claim a client deployment or measured commercial results.</PageIntro>
+    <CapstoneFeature />
+  </main>;
+}

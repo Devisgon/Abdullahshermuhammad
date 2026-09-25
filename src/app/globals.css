@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #40005b;
+  --color-accent: #a71a7f;
+  --color-surface: #fbf9fc;
+  --color-ink: #17131a;
+  --color-muted: #554e5b;
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #eadbed;
+  color: #40005b;
+}
