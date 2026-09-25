@@ -17,8 +17,12 @@ export function PrivacyDetails() {
         <p>When you submit an enquiry, its details are delivered to our form provider for Abdullah to review and respond. GitHub Pages does not store the submission. The form provider&apos;s privacy and retention terms also apply. You can ask Abdullah to delete information you shared.</p>
       </div>
       <div>
+        <h2 className="mb-2 text-2xl font-bold text-ink">Website analytics</h2>
+        <p>We use Microsoft Clarity to understand how visitors use this site through usage analytics, heatmaps and session recordings. Clarity may collect information such as pages viewed, clicks, scrolling and device details. Form fields and other sensitive content are masked by default. Read the <a className="underline hover:text-link" href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer">Microsoft privacy statement</a> for more information.</p>
+      </div>
+      <div>
         <h2 className="mb-2 text-2xl font-bold text-ink">External links</h2>
-        <p>Links to LinkedIn and Devisgon take you to separate websites with their own privacy practices. This site does not currently embed an external booking calendar or an analytics service.</p>
+        <p>Links to LinkedIn and Devisgon take you to separate websites with their own privacy practices. This site does not currently embed an external booking calendar.</p>
       </div>
       <div>
         <h2 className="mb-2 text-2xl font-bold text-ink">Contact</h2>
