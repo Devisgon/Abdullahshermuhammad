@@ -22,9 +22,9 @@ export function PrivacyDetails() {
       </div>
       <div>
         <h2 className="mb-2 text-2xl font-bold text-ink">Contact</h2>
-        <p>To ask about your information or request deletion, contact Abdullah through <a className="underline hover:text-brand" href="https://www.linkedin.com/in/abdullahshermuhammad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+        <p>To ask about your information or request deletion, contact Abdullah through <a className="underline hover:text-link" href="https://www.linkedin.com/in/abdullahshermuhammad/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
       </div>
-      <Link href="/assessment" className="inline-flex font-bold text-brand hover:text-accent">Return to the assessment →</Link>
+      <Link href="/assessment" className="inline-flex font-bold text-link hover:text-highlight">Return to the assessment →</Link>
     </Container>
   </section>;
 }

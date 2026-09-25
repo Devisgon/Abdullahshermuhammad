@@ -15,10 +15,10 @@ const questions = [
 export function FAQList() {
   return <section className="pb-24">
     <Container>
-      <div className="max-w-[900px] divide-y divide-[#e8ddec] border-y border-[#e8ddec]">{questions.map(([question, answer]) => <details key={question} className="group py-5">
+      <div className="max-w-[900px] divide-y divide-edge border-y border-edge">{questions.map(([question, answer]) => <details key={question} className="group py-5">
           <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-bold marker:hidden">
             {question}
-            <span aria-hidden="true" className="text-2xl text-accent group-open:rotate-45">+</span>
+            <span aria-hidden="true" className="text-2xl text-highlight group-open:rotate-45">+</span>
           </summary>
           <p className="max-w-[780px] pt-4 leading-relaxed text-muted">{answer}</p>
         </details>)}</div>

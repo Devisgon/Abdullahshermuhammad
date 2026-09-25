@@ -1,12 +1,65 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+/* Brand colors stay constant. Semantic colors change with the selected theme. */
+@theme inline {
   --color-brand: #40005b;
   --color-accent: #a71a7f;
-  --color-surface: #fbf9fc;
-  --color-ink: #17131a;
-  --color-muted: #554e5b;
+  --color-surface: var(--site-surface);
+  --color-panel: var(--site-panel);
+  --color-subtle: var(--site-subtle);
+  --color-subtle-strong: var(--site-subtle-strong);
+  --color-selected: var(--site-selected);
+  --color-input: var(--site-input);
+  --color-ink: var(--site-ink);
+  --color-muted: var(--site-muted);
+  --color-nav: var(--site-nav);
+  --color-link: var(--site-link);
+  --color-highlight: var(--site-highlight);
+  --color-action: var(--site-action);
+  --color-edge: var(--site-edge);
+  --color-edge-strong: var(--site-edge-strong);
   --font-sans: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --site-surface: #fbf9fc;
+  --site-panel: #ffffff;
+  --site-subtle: #f3edf5;
+  --site-subtle-strong: #f0e8f2;
+  --site-selected: #eadbed;
+  --site-input: #ffffff;
+  --site-ink: #17131a;
+  --site-muted: #554e5b;
+  --site-nav: #544c59;
+  --site-link: #40005b;
+  --site-highlight: #a71a7f;
+  --site-action: #40005b;
+  --site-edge: #e7dbe9;
+  --site-edge-strong: #d9cadf;
+  --site-selection: #eadbed;
+  --site-selection-ink: #40005b;
+}
+
+html.dark {
+  color-scheme: dark;
+  --site-surface: #120c19;
+  --site-panel: #23162c;
+  --site-subtle: #1c1125;
+  --site-subtle-strong: #2d1b37;
+  --site-selected: #493052;
+  --site-input: #2a1a34;
+  --site-ink: #f9f4fb;
+  --site-muted: #cbbdd2;
+  --site-nav: #e4d8e8;
+  --site-link: #efc1f0;
+  --site-highlight: #e893d1;
+  --site-action: #74237f;
+  --site-edge: #4c3558;
+  --site-edge-strong: #705378;
+  --site-selection: #a71a7f;
+  --site-selection-ink: #ffffff;
 }
 
 html {
@@ -14,6 +67,6 @@ html {
 }
 
 ::selection {
-  background: #eadbed;
-  color: #40005b;
+  background: var(--site-selection);
+  color: var(--site-selection-ink);
 }

@@ -11,7 +11,7 @@ export function OfferPageView({ page }: { page: OfferPage }) {
     <section className="py-20 md:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
         <div>
-          <p className="mb-5 text-xs font-extrabold tracking-widest text-accent">{page.eyebrow}</p>
+          <p className="mb-5 text-xs font-extrabold tracking-widest text-highlight">{page.eyebrow}</p>
           <h1 className="text-[clamp(2.8rem,4.5vw,4.7rem)] leading-[1.07] font-bold tracking-[-0.055em]">{page.title}</h1>
           <p className="mt-6 text-lg leading-relaxed text-muted">{page.description}</p>
           <ButtonLink className="mt-8">
@@ -23,9 +23,9 @@ export function OfferPageView({ page }: { page: OfferPage }) {
         <OfferVisual kind={page.visual} />
       </Container>
     </section>
-    <section className="bg-[#f2eaf3] py-16">
+    <section className="bg-subtle-strong py-16">
       <Container>
-        <p className="mb-4 text-xs font-extrabold tracking-widest text-accent">WHERE THE WORK BREAKS</p>
+        <p className="mb-4 text-xs font-extrabold tracking-widest text-highlight">WHERE THE WORK BREAKS</p>
         <h2 className="max-w-[900px] text-3xl leading-snug font-bold tracking-tight md:text-4xl">{page.problem}</h2>
       </Container>
     </section>
@@ -33,13 +33,13 @@ export function OfferPageView({ page }: { page: OfferPage }) {
       <Container>
         <SectionIntro eyebrow="THE FIRST VERSION" title="A clear process from" highlight="trigger to handoff." />
         <div className="grid gap-5 md:grid-cols-3">{page.steps.map(([title, description], index) => <FeatureCard key={title} number={`0${index + 1} / ${title.toUpperCase()}`} title={title} description={description} />)}</div>
-        <div className="mt-20 grid gap-8 rounded-lg bg-[#f3edf5] p-8 md:grid-cols-2 md:p-12">
+        <div className="mt-20 grid gap-8 rounded-lg bg-subtle p-8 md:grid-cols-2 md:p-12">
           <div>
-            <p className="text-xs font-extrabold tracking-widest text-accent">COMMON STARTING POINTS</p>
-            <h2 className="mt-6 text-3xl font-bold">Start where the work <span className="text-accent">repeats.</span></h2>
+            <p className="text-xs font-extrabold tracking-widest text-highlight">COMMON STARTING POINTS</p>
+            <h2 className="mt-6 text-3xl font-bold">Start where the work <span className="text-highlight">repeats.</span></h2>
           </div>
           <div className="grid gap-4">{page.examples.map(example => <span key={example} className="flex items-center gap-3 font-semibold">
-              <Check size={17} className="text-accent" />
+              <Check size={17} className="text-highlight" />
               {example}
             </span>)}</div>
         </div>

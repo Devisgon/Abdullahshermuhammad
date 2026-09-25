@@ -11,15 +11,15 @@ const problems = [
 ];
 
 export function Bottlenecks() {
-  return <section id="problems" className="bg-[#f4f0f5] py-20 md:py-28">
+  return <section id="problems" className="bg-subtle py-20 md:py-28">
     <Container>
       <SectionIntro eyebrow="THE EVERYDAY BOTTLENECK" title="Work keeps moving." highlight="Your systems don’t.">Most teams already have enough software. The expensive part is what happens in the gaps between their tools.</SectionIntro>
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">{problems.map(([number, title, detail]) => <article key={number} className="min-h-56 rounded-lg border border-[#e8ddec] bg-white p-7">
-          <span className="text-xs font-extrabold tracking-widest text-accent">{number}</span>
+      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">{problems.map(([number, title, detail]) => <article key={number} className="min-h-56 rounded-lg border border-edge bg-panel p-7">
+          <span className="text-xs font-extrabold tracking-widest text-highlight">{number}</span>
           <h3 className="mt-9 text-xl font-bold tracking-tight">{title}</h3>
           <p className="mt-3 text-sm leading-relaxed text-muted">{detail}</p>
         </article>)}</div>
-      <p className="mt-8 text-sm leading-relaxed text-muted">The goal is a clear next step for every lead, call and customer request. <Link href="/assessment" className="inline-flex items-center gap-1 font-bold text-brand hover:text-accent">Find where to start <ArrowUpRight size={16} /></Link></p>
+      <p className="mt-8 text-sm leading-relaxed text-muted">The goal is a clear next step for every lead, call and customer request. <Link href="/assessment" className="inline-flex items-center gap-1 font-bold text-link hover:text-highlight">Find where to start <ArrowUpRight size={16} /></Link></p>
     </Container>
   </section>;
 }

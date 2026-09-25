@@ -11,10 +11,10 @@ const options = [
 export function EngagementOptions() {
   return <section className="pb-24">
     <Container>
-      <div className="grid gap-5 md:grid-cols-3">{options.map(option => <article key={option.number} className="flex flex-col rounded-lg border border-[#e7dbe9] bg-white p-7">
-          <span className="text-xs font-extrabold tracking-widest text-accent">{option.number} / OFFER</span>
+      <div className="grid gap-5 md:grid-cols-3">{options.map(option => <article key={option.number} className="flex flex-col rounded-lg border border-edge bg-panel p-7">
+          <span className="text-xs font-extrabold tracking-widest text-highlight">{option.number} / OFFER</span>
           <h2 className="mt-8 text-2xl font-bold">{option.title}</h2>
-          <strong className="mt-5 text-xl text-brand">{option.price}</strong>
+          <strong className="mt-5 text-xl text-link">{option.price}</strong>
           <p className="mt-4 flex-1 leading-relaxed text-muted">{option.description}</p>
           <ButtonLink className="mt-8 self-start">
             {option.number === '01' ? 'Take the free assessment' : 'Discuss this scope'}
