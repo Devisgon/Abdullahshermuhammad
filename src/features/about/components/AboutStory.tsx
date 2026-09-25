@@ -16,7 +16,7 @@ export function AboutStory() {
       <p>My background spans web applications, APIs, backends and cloud infrastructure. I use that experience to design useful automation across lead response, customer communication and internal operations. When existing platforms cover the need, I connect them. When they reach a limit, I build the missing software.</p>
       <h2 className="pt-5 text-3xl font-bold tracking-tight text-ink">How I approach the work</h2>
       <ul className="list-disc space-y-2 pl-6">{principles.map(principle => <li key={principle}>{principle}</li>)}</ul>
-      <p>I work with international businesses and lead technical delivery through Devisgon, my software company.</p>
+      <p>I’m based in Okara, Pakistan, and work with businesses internationally. I lead technical delivery through Devisgon, my software company.</p>
       <ButtonLink>Show me your workflow <ArrowUpRight size={18} /></ButtonLink>
     </Container>
   </section>;

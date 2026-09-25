@@ -4,9 +4,11 @@ import { Container } from '@/components/ui/Container';
 import { FeatureCard } from '@/components/ui/FeatureCard';
 import { SectionIntro } from '@/components/ui/SectionIntro';
 import type { OfferPage } from '@/content/offers';
+import type { SearchTarget } from '@/content/seo-targets';
+import { SearchContext } from '@/components/ui/SearchContext';
 import { OfferVisual } from './OfferVisual';
 
-export function OfferPageView({ page }: { page: OfferPage }) {
+export function OfferPageView({ page, context }: { page: OfferPage; context: SearchTarget }) {
   return <main>
     <section className="py-20 md:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
@@ -29,6 +31,7 @@ export function OfferPageView({ page }: { page: OfferPage }) {
         <h2 className="max-w-[900px] text-3xl leading-snug font-bold tracking-tight md:text-4xl">{page.problem}</h2>
       </Container>
     </section>
+    <SearchContext context={context} />
     <section className="py-20 md:py-28">
       <Container>
         <SectionIntro eyebrow="THE FIRST VERSION" title="A clear process from" highlight="trigger to handoff." />

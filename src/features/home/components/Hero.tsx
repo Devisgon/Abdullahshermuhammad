@@ -9,7 +9,7 @@ export function Hero() {
       <div>
         <p className="mb-5 text-xs font-extrabold tracking-[0.15em] text-highlight uppercase"><span className="mr-2 inline-block h-0.5 w-6 align-middle bg-accent" />AI AUTOMATION FOR REAL BUSINESS WORK</p>
         <h1 id="hero-title" className="max-w-[710px] text-[clamp(3rem,5.1vw,5rem)] leading-[1.055] font-bold tracking-[-0.055em]">Stop paying people to do work <span className="text-highlight">software can do.</span></h1>
-        <p className="mt-7 max-w-[620px] text-lg leading-[1.65] text-muted">I design and build systems that answer calls, follow up with leads, handle routine questions and move information between the tools your business already uses.</p>
+        <p className="mt-7 max-w-[620px] text-lg leading-[1.65] text-muted">I design AI automation for service businesses: systems that answer calls, follow up with leads, handle routine questions and move information between the tools your business already uses.</p>
         <div className="mt-8 flex flex-wrap items-center gap-5">
           <ButtonLink>Find my automation opportunities <ArrowUpRight size={18} /></ButtonLink>
           <a href="#how-it-works" className="inline-flex items-center gap-2 font-bold text-link hover:text-highlight">See how it works <ArrowRight size={17} /></a>

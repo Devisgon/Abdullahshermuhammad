@@ -16,12 +16,12 @@ const initializeTheme = `(function () {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   ...createPageMetadata({
-    title: 'Abdullah Sher Muhammad | AI Automation & Business Systems',
-    description: 'Practical AI automation, lead follow-up, call handling and connected business systems designed by Abdullah Sher Muhammad, software engineer and founder of Devisgon.',
+    title: 'AI Automation Consultant for Service Businesses | Abdullah Sher Muhammad',
+    description: 'AI automation for service businesses: call handling, lead follow-up, CRM integration and connected workflows designed by Abdullah Sher Muhammad, founder of Devisgon.',
     path: '/',
   }),
   title: {
-    default: 'Abdullah Sher Muhammad | AI Automation & Business Systems',
+    default: 'AI Automation Consultant for Service Businesses | Abdullah Sher Muhammad',
     template: '%s | Abdullah Sher Muhammad',
   },
   applicationName: 'Abdullah Sher Muhammad',

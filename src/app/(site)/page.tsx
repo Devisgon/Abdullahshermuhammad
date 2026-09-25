@@ -7,9 +7,10 @@ import { PeopleFeature } from '@/features/home/components/PeopleFeature';
 import { AboutPreview } from '@/features/home/components/AboutPreview';
 import { ProcessSteps } from '@/features/home/components/ProcessSteps';
 import { FinalCTA } from '@/features/home/components/FinalCTA';
+import { IdentitySchema } from '@/components/seo/IdentitySchema';
 
 export default function HomePage() {
-  return <main>
+  return <><IdentitySchema /><main>
     <Hero />
     <Bottlenecks />
     <Solutions />
@@ -19,5 +20,5 @@ export default function HomePage() {
     <AboutPreview />
     <ProcessSteps />
     <FinalCTA />
-  </main>;
+  </main></>;
 }

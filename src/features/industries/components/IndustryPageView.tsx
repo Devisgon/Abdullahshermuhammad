@@ -4,8 +4,10 @@ import { Callout } from '@/components/ui/Callout';
 import { Container } from '@/components/ui/Container';
 import { SectionIntro } from '@/components/ui/SectionIntro';
 import type { Industry } from '@/content/industries';
+import type { SearchTarget } from '@/content/seo-targets';
+import { SearchContext } from '@/components/ui/SearchContext';
 
-export function IndustryPageView({ industry }: { industry: Industry }) {
+export function IndustryPageView({ industry, context }: { industry: Industry; context: SearchTarget }) {
   const events = [
     { Icon: Phone, title: 'New customer enquiry', detail: 'Call or website form' },
     { Icon: UserRoundCheck, title: 'Details captured', detail: 'Service · location · urgency' },
@@ -42,6 +44,7 @@ export function IndustryPageView({ industry }: { industry: Industry }) {
         <h2 className="max-w-[900px] text-3xl leading-snug font-bold tracking-tight md:text-4xl">{industry.pain}</h2>
       </Container>
     </section>
+    <SearchContext context={context} />
     <section className="py-20 md:py-28">
       <Container>
         <SectionIntro eyebrow="WHERE TO START" title="One call or lead type." highlight="One clear next step." />

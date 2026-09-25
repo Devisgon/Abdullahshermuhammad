@@ -6,7 +6,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Container } from '@/components/ui/Container';
 import { PartnershipProcess } from '@/features/partners/components/PartnershipProcess';
 
-export const metadata: Metadata = createPageMetadata({ title: 'Agency Partnerships', description: 'White-label technical delivery for agencies selling AI automation, voice, integrations and custom software.', path: '/partners/' });
+export const metadata: Metadata = createPageMetadata({ title: 'White-Label AI Automation for Agencies', description: 'Technical delivery for agencies offering AI voice agents, workflow automation, CRM integrations and custom software to their clients.', path: '/partners/' });
 export default function PartnersPage() {
   return <main>
     <PageIntro eyebrow="FOR AGENCIES" title="You own the client relationship." highlight="We build the system.">Need technical delivery for an AI automation, voice, integration or custom software project? I lead implementation with the team at Devisgon.</PageIntro>
