@@ -7,7 +7,7 @@ Personal website for Abdullah Sher Muhammad. Built with Next.js 16, React 19, Ty
 ```text
 src/
 ├── app/
-│   ├── globals.css              # Tailwind import, theme colors, font and sitewide rules only
+│   ├── globals.css              # Tailwind setup, light/dark palettes, font and sitewide rules
 │   ├── layout.tsx                # HTML, metadata and body theme
 │   └── (site)/
 │       ├── layout.tsx            # Shared header and footer
@@ -16,7 +16,7 @@ src/
 │       ├── industries/[slug]/    # Industry page routes
 │       └── */page.tsx            # Other standalone pages
 ├── components/
-│   ├── layout/                   # Header, mobile menu, brand, footer
+│   ├── layout/                   # Header, theme toggle, mobile menu, brand, footer
 │   └── ui/                       # Reusable cards, buttons, intros and form controls
 ├── content/                      # Navigation, service, offer and industry copy
 ├── features/
@@ -29,7 +29,7 @@ public/                           # Logo, favicon, portraits and CNAME
 .github/workflows/deploy.yml       # GitHub Pages deployment
 ```
 
-**Styling rule:** Put component styling in that component's Tailwind `className` attributes. `src/app/globals.css` contains only theme tokens and rules that apply across the entire site. There are no page or component CSS files. To change the primary purple, accent, background, text color, or font globally, edit `@theme` in `globals.css`.
+**Styling rule:** Put component styling in that component's Tailwind `className` attributes. `src/app/globals.css` contains only theme tokens and sitewide rules. Brand colors and font are in `@theme inline`; light and dark values are in `:root` and `html.dark`. There are no page or component CSS files. The header toggle saves a choice under `asm-theme` in browser storage and follows the system theme until a choice is saved.
 
 The header logo is `public/ASM-LOGO.png`. Homepage content begins in `src/app/(site)/page.tsx`, which imports named sections from `src/features/home/components/`. Change service copy in `src/content/offers.ts`, industry copy in `src/content/industries.ts`, and menu items in `src/content/navigation.ts`.
 

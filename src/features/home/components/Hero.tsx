@@ -7,19 +7,19 @@ export function Hero() {
   return <section aria-labelledby="hero-title">
     <Container className="grid items-center gap-12 py-16 lg:min-h-[750px] lg:grid-cols-[1fr_0.9fr] lg:gap-[5vw] lg:py-20">
       <div>
-        <p className="mb-5 text-xs font-extrabold tracking-[0.15em] text-accent uppercase"><span className="mr-2 inline-block h-0.5 w-6 align-middle bg-accent" />AI AUTOMATION FOR REAL BUSINESS WORK</p>
-        <h1 id="hero-title" className="max-w-[710px] text-[clamp(3rem,5.1vw,5rem)] leading-[1.055] font-bold tracking-[-0.055em]">Stop paying people to do work <span className="text-accent">software can do.</span></h1>
+        <p className="mb-5 text-xs font-extrabold tracking-[0.15em] text-highlight uppercase"><span className="mr-2 inline-block h-0.5 w-6 align-middle bg-accent" />AI AUTOMATION FOR REAL BUSINESS WORK</p>
+        <h1 id="hero-title" className="max-w-[710px] text-[clamp(3rem,5.1vw,5rem)] leading-[1.055] font-bold tracking-[-0.055em]">Stop paying people to do work <span className="text-highlight">software can do.</span></h1>
         <p className="mt-7 max-w-[620px] text-lg leading-[1.65] text-muted">I design and build systems that answer calls, follow up with leads, handle routine questions and move information between the tools your business already uses.</p>
         <div className="mt-8 flex flex-wrap items-center gap-5">
           <ButtonLink>Find my automation opportunities <ArrowUpRight size={18} /></ButtonLink>
-          <a href="#how-it-works" className="inline-flex items-center gap-2 font-bold text-brand hover:text-accent">See how it works <ArrowRight size={17} /></a>
+          <a href="#how-it-works" className="inline-flex items-center gap-2 font-bold text-link hover:text-highlight">See how it works <ArrowRight size={17} /></a>
         </div>
-        <p className="mt-4 text-sm text-[#766d7a]">A short assessment · No obligation · Practical recommendations</p>
-        <div className="mt-12 flex w-fit max-w-full items-center gap-3 border-t border-[#e9e0eb] pt-6">
-          <span aria-hidden="true" className="grid size-11 place-items-center rounded-full bg-[#eadbed] text-xs font-extrabold text-brand">ASM</span>
+        <p className="mt-4 text-sm text-muted">A short assessment · No obligation · Practical recommendations</p>
+        <div className="mt-12 flex w-fit max-w-full items-center gap-3 border-t border-edge pt-6">
+          <span aria-hidden="true" className="grid size-11 place-items-center rounded-full bg-selected text-xs font-extrabold text-link">ASM</span>
           <span className="flex flex-col gap-1">
             <strong className="text-sm">Abdullah Sher Muhammad</strong>
-            <small className="text-xs text-[#716a75]">Software engineer · Founder, Devisgon</small>
+            <small className="text-xs text-muted">Software engineer · Founder, Devisgon</small>
           </span>
         </div>
       </div>

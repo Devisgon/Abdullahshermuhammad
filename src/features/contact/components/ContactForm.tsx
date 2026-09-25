@@ -8,7 +8,7 @@ import { FormCard } from '@/components/ui/FormCard';
 import { submitLead } from '@/lib/lead-form';
 
 const initial = { name: '', email: '', company: '', website: '', businessType: '', bottleneck: '', currentTools: '', timeline: '', details: '', websiteConfirm: '' };
-const submitClass = 'mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-accent disabled:cursor-wait disabled:opacity-60';
+const submitClass = 'mt-7 inline-flex min-h-12 items-center justify-center gap-2 rounded bg-action px-5 py-3 text-sm font-bold text-white hover:bg-accent disabled:cursor-wait disabled:opacity-60';
 
 export function ContactForm({ kind = 'project' }: { kind?: 'project' | 'review' }) {
   const [form, setForm] = useState(initial);
@@ -32,7 +32,7 @@ export function ContactForm({ kind = 'project' }: { kind?: 'project' | 'review' 
 
   if (status === 'sent') return <FormCard>
     <div role="status">
-      <Check size={32} className="text-accent" />
+      <Check size={32} className="text-highlight" />
       <h2 className="mt-5 text-2xl font-bold">Thanks — your request is in.</h2>
       <p className="mt-4 leading-relaxed text-muted">{kind === 'review' ? 'This is a request for a review, not a confirmed appointment. I’ll follow up by email about the next step.' : 'I’ll review the workflow details you sent and follow up by email if there is a fit.'}</p>
       <Link className={submitClass} href="/services">Explore the services <ArrowRight size={17} /></Link>
@@ -93,7 +93,7 @@ export function ContactForm({ kind = 'project' }: { kind?: 'project' | 'review' 
         <ArrowRight size={17} />
       </button>
       {error && <p className="text-sm font-semibold text-red-700" role="alert">{error}</p>}
-      <p className="text-xs leading-relaxed text-muted">Your details are used to review and respond to this enquiry. Read the <Link href="/privacy" className="underline hover:text-accent">privacy note</Link>.</p>
+      <p className="text-xs leading-relaxed text-muted">Your details are used to review and respond to this enquiry. Read the <Link href="/privacy" className="underline hover:text-highlight">privacy note</Link>.</p>
     </form>
   </FormCard>;
 }

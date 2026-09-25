@@ -11,14 +11,14 @@ const details = [
 export function CapstoneFeature() {
   return <section className="pb-24">
     <Container>
-      <article className="grid gap-10 rounded-lg border border-[#e7dbe9] bg-white p-8 md:grid-cols-2 md:p-12">
+      <article className="grid gap-10 rounded-lg border border-edge bg-panel p-8 md:grid-cols-2 md:p-12">
         <div>
-          <p className="text-xs font-extrabold tracking-widest text-accent">UNIVERSITY CAPSTONE · IN DEVELOPMENT</p>
+          <p className="text-xs font-extrabold tracking-widest text-highlight">UNIVERSITY CAPSTONE · IN DEVELOPMENT</p>
           <h2 className="mt-6 text-3xl leading-tight font-bold tracking-tight md:text-4xl">Smart Query Routing & Email Automation System</h2>
           <p className="mt-6 leading-relaxed text-muted">A university communication platform designed to classify incoming student email queries, route them to the responsible department and give staff a role-based view of the work.</p>
         </div>
-        <div>{details.map(([label, detail]) => <div key={label} className="border-b border-[#e8ddec] py-4 first:pt-0">
-            <strong className="text-xs tracking-widest text-accent">{label}</strong>
+        <div>{details.map(([label, detail]) => <div key={label} className="border-b border-edge py-4 first:pt-0">
+            <strong className="text-xs tracking-widest text-highlight">{label}</strong>
             <p className="mt-2 leading-relaxed text-muted">{detail}</p>
           </div>)}</div>
       </article>

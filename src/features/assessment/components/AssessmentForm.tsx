@@ -15,7 +15,7 @@ const steps = [
   { title: 'Roughly how many enquiries do you receive?', hint: 'A rough estimate is enough.', field: 'volume', choices: ['Fewer than 20 per month', '20–100 per month', '100–500 per month', 'More than 500 per month', 'Not sure / not applicable'] },
   { title: 'When would you like to improve this?', hint: 'This helps me suggest a realistic first step.', field: 'timeline', choices: ['Exploring options', 'Within 3 months', 'This month', 'As soon as possible'] },
 ] as const;
-const actionClass = 'inline-flex min-h-12 items-center justify-center gap-2 rounded bg-brand px-5 py-3 text-sm font-bold text-white hover:bg-accent disabled:opacity-60';
+const actionClass = 'inline-flex min-h-12 items-center justify-center gap-2 rounded bg-action px-5 py-3 text-sm font-bold text-white hover:bg-accent disabled:opacity-60';
 
 export function AssessmentForm() {
   const [step, setStep] = useState(0);
@@ -41,8 +41,8 @@ export function AssessmentForm() {
 
   if (status === 'done') return <FormCard>
     <div role="status">
-      <Check size={32} className="text-accent" />
-      <p className="mt-5 text-xs font-bold tracking-widest text-accent">YOUR ANSWERS ARE IN</p>
+      <Check size={32} className="text-highlight" />
+      <p className="mt-5 text-xs font-bold tracking-widest text-highlight">YOUR ANSWERS ARE IN</p>
       <h2 className="mt-3 text-2xl font-bold">{category}</h2>
       <p className="mt-5 leading-relaxed text-muted">Thank you. Your answers have been sent for review. I’ll use the details you shared to identify a sensible first workflow.</p>
       <a className={`${actionClass} mt-7`} href="https://www.linkedin.com/in/abdullahshermuhammad/" target="_blank" rel="noopener noreferrer">Connect with Abdullah <ArrowRight size={17} /></a>
@@ -52,19 +52,19 @@ export function AssessmentForm() {
 
   const question = steps[step];
   return <FormCard>
-    <div className="flex items-center justify-between text-xs font-extrabold tracking-widest text-accent">
+    <div className="flex items-center justify-between text-xs font-extrabold tracking-widest text-highlight">
       <span>STEP {step + 1} OF 5</span>
       <span>{(step + 1) * 20}%</span>
     </div>
-    <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#eadfed]" role="progressbar" aria-valuenow={(step + 1) * 20} aria-valuemin={0} aria-valuemax={100} aria-label="Assessment progress">
+    <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-selected" role="progressbar" aria-valuenow={(step + 1) * 20} aria-valuemin={0} aria-valuemax={100} aria-label="Assessment progress">
       <div className={`h-full rounded-full bg-accent transition-all ${['w-1/5', 'w-2/5', 'w-3/5', 'w-4/5', 'w-full'][step]}`} />
     </div>
     {step < 4 ? <div>
       <h2 className="mt-8 text-2xl font-bold">{question.title}</h2>
       <p className="mt-2 text-sm text-muted">{question.hint}</p>
-      <div className="mt-7 grid gap-3">{question.choices.map(choice => <button key={choice} type="button" aria-pressed={answers[question.field] === choice} onClick={() => set(question.field, choice)} className={`rounded border p-4 text-left text-sm font-semibold transition-colors ${answers[question.field] === choice ? 'border-accent bg-[#f2e7f4] text-brand' : 'border-[#dfd1e3] bg-white text-ink hover:border-accent'}`}>{choice}</button>)}</div>
+      <div className="mt-7 grid gap-3">{question.choices.map(choice => <button key={choice} type="button" aria-pressed={answers[question.field] === choice} onClick={() => set(question.field, choice)} className={`rounded border p-4 text-left text-sm font-semibold transition-colors ${answers[question.field] === choice ? 'border-accent bg-selected text-link' : 'border-edge-strong bg-panel text-ink hover:border-accent'}`}>{choice}</button>)}</div>
       <div className="mt-7 flex items-center justify-between gap-4">
-        {step > 0 ? <button type="button" onClick={() => setStep(current => current - 1)} className="font-semibold text-brand">← Back</button> : <span />}
+        {step > 0 ? <button type="button" onClick={() => setStep(current => current - 1)} className="font-semibold text-link">← Back</button> : <span />}
         <button type="button" onClick={next} className={actionClass}>Continue <ArrowRight size={17} /></button>
       </div>
     </div> :
@@ -95,13 +95,13 @@ export function AssessmentForm() {
         <textarea maxLength={2000} placeholder="What happens today? Where does it get stuck?" value={answers.details} onChange={event => set('details', event.target.value)} />
       </FormField>
       <div className="flex items-center justify-between gap-4">
-        <button type="button" onClick={() => setStep(3)} className="font-semibold text-brand">← Back</button>
+        <button type="button" onClick={() => setStep(3)} className="font-semibold text-link">← Back</button>
         <button type="submit" disabled={status === 'sending'} className={actionClass}>
           {status === 'sending' ? 'Saving…' : 'Send my assessment'}
           <ArrowRight size={17} />
         </button>
       </div>
-      <p className="text-xs leading-relaxed text-muted">Your details are used to review and respond to this enquiry. Read the <Link href="/privacy" className="underline hover:text-accent">privacy note</Link>.</p>
+      <p className="text-xs leading-relaxed text-muted">Your details are used to review and respond to this enquiry. Read the <Link href="/privacy" className="underline hover:text-highlight">privacy note</Link>.</p>
     </form>}
     {error && <p className="mt-5 text-sm font-semibold text-red-700" role="alert">{error}</p>}
   </FormCard>;

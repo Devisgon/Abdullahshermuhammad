@@ -11,8 +11,8 @@ export function ProcessSteps() {
   return <section className="py-20 md:py-28">
     <Container>
       <SectionIntro eyebrow="THE FIRST STEP" title="One process." highlight="A practical plan." />
-      <div className="grid gap-6 md:grid-cols-3">{process.map(([step, title, detail]) => <article key={step} className="border-t-2 border-brand pt-7">
-          <span className="text-xs font-extrabold tracking-widest text-accent">{step}</span>
+      <div className="grid gap-6 md:grid-cols-3">{process.map(([step, title, detail]) => <article key={step} className="border-t-2 border-highlight pt-7">
+          <span className="text-xs font-extrabold tracking-widest text-highlight">{step}</span>
           <h3 className="mt-7 text-2xl font-bold">{title}</h3>
           <p className="mt-4 leading-relaxed text-muted">{detail}</p>
         </article>)}</div>

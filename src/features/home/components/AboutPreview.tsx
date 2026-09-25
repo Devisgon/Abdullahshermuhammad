@@ -16,11 +16,11 @@ export function AboutPreview() {
         <small className="text-xs font-extrabold tracking-[0.25em] text-[#e6b5dd]">BUILD THE WORKFLOW.</small>
       </div>
       <div>
-        <p className="mb-5 text-xs font-extrabold tracking-widest text-accent">THE PERSON BEHIND THE SYSTEM</p>
-        <h2 className="text-[clamp(2.4rem,4vw,4rem)] leading-[1.08] font-bold tracking-[-0.055em]">Engineering depth.<br /><span className="text-accent">Business-first thinking.</span></h2>
+        <p className="mb-5 text-xs font-extrabold tracking-widest text-highlight">THE PERSON BEHIND THE SYSTEM</p>
+        <h2 className="text-[clamp(2.4rem,4vw,4rem)] leading-[1.08] font-bold tracking-[-0.055em]">Engineering depth.<br /><span className="text-highlight">Business-first thinking.</span></h2>
         <p className="mt-6 leading-[1.75] text-muted">I’m Abdullah Sher Muhammad, a software engineer and the founder of Devisgon. I work across APIs, web applications, cloud infrastructure and automation, so a solution can go beyond a prompt or a disconnected tool.</p>
-        <div className="mt-6 flex flex-wrap gap-2">{skills.map(skill => <span key={skill} className="rounded border border-[#e5d8e8] px-3 py-1.5 text-xs font-bold text-brand">{skill}</span>)}</div>
-        <Link className="mt-7 inline-flex items-center gap-2 font-bold text-brand hover:text-accent" href="/about">Meet Abdullah <ArrowUpRight size={18} /></Link>
+        <div className="mt-6 flex flex-wrap gap-2">{skills.map(skill => <span key={skill} className="rounded border border-edge px-3 py-1.5 text-xs font-bold text-link">{skill}</span>)}</div>
+        <Link className="mt-7 inline-flex items-center gap-2 font-bold text-link hover:text-highlight" href="/about">Meet Abdullah <ArrowUpRight size={18} /></Link>
       </div>
     </Container>
   </section>;
