@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import { createPageMetadata } from '@/lib/seo';
 import { PageIntro } from '@/components/ui/PageIntro';
 import { IndustryDirectory } from '@/features/industries/components/IndustryDirectory';
 
-export const metadata: Metadata = { title: 'Industries | Abdullah Sher Muhammad', description: 'Practical AI automation for home services, HVAC, roofing and plumbing teams.' };
+export const metadata: Metadata = createPageMetadata({ title: 'Industries', description: 'Practical AI automation for home services, HVAC, roofing and plumbing teams.', path: '/industries/' });
 
 export default function IndustriesPage() {
   return <main>
