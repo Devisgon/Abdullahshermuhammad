@@ -24,7 +24,7 @@ src/
 │   ├── offers/components/        # Reusable service page view and workflow illustration
 │   ├── industries/components/    # Directory and industry page view
 │   └── */components/             # Sections and forms for each remaining page
-└── lib/                          # Form submission and small utilities
+└── lib/                          # Shared SEO metadata, form submission and utilities
 public/                           # Logo, favicon, portraits and CNAME
 .github/workflows/deploy.yml       # GitHub Pages deployment
 ```
@@ -32,6 +32,8 @@ public/                           # Logo, favicon, portraits and CNAME
 **Styling rule:** Put component styling in that component's Tailwind `className` attributes. `src/app/globals.css` contains only theme tokens and sitewide rules. Brand colors and font are in `@theme inline`; light and dark values are in `:root` and `html.dark`. There are no page or component CSS files. The header toggle saves a choice under `asm-theme` in browser storage and follows the system theme until a choice is saved.
 
 The header logo is `public/ASM-LOGO.png`. Homepage content begins in `src/app/(site)/page.tsx`, which imports named sections from `src/features/home/components/`. Change service copy in `src/content/offers.ts`, industry copy in `src/content/industries.ts`, and menu items in `src/content/navigation.ts`.
+
+**Social preview image:** Add a 1200 × 630 PNG named `og-image.png` at `public/images/og-image.png`. Every page uses that image for Open Graph and X/Twitter previews. Page titles, descriptions and canonical URLs are generated through `src/lib/seo.ts` and the page metadata. Preview images will not appear in shared links until this file is uploaded and deployed. The image URL is `https://abdullahshermuhammad.me/images/og-image.png`.
 
 ## Run locally
 

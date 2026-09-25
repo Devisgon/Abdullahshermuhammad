@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { createPageMetadata, siteUrl } from '@/lib/seo';
 import './globals.css';
 
 const initializeTheme = `(function () {
@@ -13,11 +14,21 @@ const initializeTheme = `(function () {
 })();`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  ...createPageMetadata({
+    title: 'Abdullah Sher Muhammad | AI Automation & Business Systems',
+    description: 'Practical AI automation, lead follow-up, call handling and connected business systems designed by Abdullah Sher Muhammad, software engineer and founder of Devisgon.',
+    path: '/',
+  }),
   title: {
     default: 'Abdullah Sher Muhammad | AI Automation & Business Systems',
     template: '%s | Abdullah Sher Muhammad',
   },
-  description: 'Practical AI automation, lead follow-up, call handling and connected business systems designed by Abdullah Sher Muhammad, software engineer and founder of Devisgon.',
+  applicationName: 'Abdullah Sher Muhammad',
+  authors: [{ name: 'Abdullah Sher Muhammad', url: siteUrl }],
+  creator: 'Abdullah Sher Muhammad',
+  publisher: 'Abdullah Sher Muhammad',
+  robots: { index: true, follow: true },
   icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
 };
 
