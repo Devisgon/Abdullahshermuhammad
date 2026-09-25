@@ -10,8 +10,8 @@ export function AboutPreview() {
       <div className="flex min-h-[430px] flex-col items-center justify-center rounded-lg bg-[radial-gradient(circle_at_50%_40%,#812291,#40005b_70%)] text-white">
         <span aria-label="ASM" className="inline-flex items-center text-[clamp(6rem,15vw,12rem)] leading-none font-extrabold tracking-[-0.1em]">
           <span aria-hidden="true">A</span>
-          <span aria-hidden="true" className="inline-block origin-center rotate-[8deg]">S</span>
-          <span aria-hidden="true">M</span>
+          <span aria-hidden="true" className="relative z-10 inline-block origin-center rotate-[8deg]">S</span>
+          <span aria-hidden="true" className="-ml-[0.08em]">M</span>
         </span>
         <small className="text-xs font-extrabold tracking-[0.25em] text-[#e6b5dd]">BUILD THE WORKFLOW.</small>
       </div>
