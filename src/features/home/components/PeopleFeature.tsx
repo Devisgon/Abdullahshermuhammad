@@ -9,7 +9,6 @@ export function PeopleFeature() {
       <div className="relative mx-auto h-[430px] w-full max-w-[520px] overflow-hidden rounded-lg bg-[linear-gradient(130deg,#4a075f,#2c003c)] md:h-[550px]">
         <div aria-hidden="true" className="pointer-events-none absolute inset-5 border border-white/30" />
         <Image src="/images/strategist-editorial-cutout.png" alt="Illustrative portrait of a strategist working at a laptop" width={1024} height={1536} unoptimized className="absolute inset-0 h-full w-full object-contain object-bottom" />
-        <span className="absolute right-5 bottom-4 rounded bg-brand/80 px-2 py-1 text-xs text-white">Illustrative portrait</span>
       </div>
       <div>
         <p className="mb-5 text-xs font-extrabold tracking-widest text-accent">HUMANS IN THE LOOP</p>
