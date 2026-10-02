@@ -8,8 +8,8 @@ export function AutomationProjects() {
     <Container>
       <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-extrabold tracking-widest text-highlight">AUTOMATION PORTFOLIO</p>
-          <h2 id="automation-projects-heading" className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">22 projects, six areas of work</h2>
+          <p className="text-xs font-extrabold tracking-widest text-highlight">PROJECT PORTFOLIO</p>
+          <h2 id="automation-projects-heading" className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">{projects.length} projects, {projectCategories.length} areas of work</h2>
         </div>
         <p className="max-w-lg text-sm leading-relaxed text-muted">Open a project to see its workflow, scope and tools. The categories show each project’s primary focus.</p>
       </div>
