@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { industries } from '@/content/industries';
 import { offerPaths } from '@/content/offers';
+import { projectPath, projects } from '@/content/projects';
 import { siteUrl } from '@/lib/seo';
 
 export const dynamic = 'force-static';
@@ -15,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     ...pages,
     ...offerPaths.map(slug => `/${slug}/`),
+    ...projects.map(project => projectPath(project.slug)),
     ...Object.keys(industries).map(slug => `/industries/${slug}/`),
   ];
 
