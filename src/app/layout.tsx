@@ -35,7 +35,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en" suppressHydrationWarning>
-    <head><script dangerouslySetInnerHTML={{ __html: initializeTheme }} /></head>
+    <head>
+      <meta name="msvalidate.01" content="7395FE97494B8D13871BB0B96853B25C" />
+      <script dangerouslySetInnerHTML={{ __html: initializeTheme }} />
+    </head>
     <body className="bg-surface font-sans text-ink antialiased">
       {children}
       <Script id="microsoft-clarity" strategy="afterInteractive">
