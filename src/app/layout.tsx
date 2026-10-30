@@ -38,16 +38,14 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <head>
       <meta name="msvalidate.01" content="7395FE97494B8D13871BB0B96853B25C" />
       <script dangerouslySetInnerHTML={{ __html: initializeTheme }} />
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JJSES919J" />
+      <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-6JJSES919J');` }} />
     </head>
     <body className="bg-surface font-sans text-ink antialiased">
       {children}
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-6JJSES919J" strategy="afterInteractive" />
-      <Script id="google-analytics" strategy="afterInteractive">
-        {`window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-6JJSES919J');`}
-      </Script>
       <Script id="microsoft-clarity" strategy="afterInteractive">
         {`(function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
