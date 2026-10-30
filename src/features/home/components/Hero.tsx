@@ -29,7 +29,7 @@ export function Hero() {
           <span>DEVISGON / AI SYSTEMS</span>
           <span>01 — 04</span>
         </div>
-        <Image src="/images/executive-editorial-cutout-optimized.webp" alt="Illustrative portrait of a business leader in a charcoal suit" width={768} height={1504} priority unoptimized className="absolute right-[-8%] bottom-[-12%] z-10 h-[112%] w-auto max-h-none object-contain object-bottom drop-shadow-[0_20px_30px_#14001d59] sm:right-[-4%] sm:bottom-[-18%] sm:h-[118%] lg:right-[-3%] lg:bottom-[-25%] lg:h-[125%]" />
+        <Image src="/images/executive-editorial-cutout-optimized.webp" alt="Illustrative portrait of a business leader in a charcoal suit" width={768} height={1504} priority fetchPriority="high" unoptimized className="absolute right-[-8%] bottom-[-12%] z-10 h-[112%] w-auto max-h-none object-contain object-bottom drop-shadow-[0_20px_30px_#14001d59] sm:right-[-4%] sm:bottom-[-18%] sm:h-[118%] lg:right-[-3%] lg:bottom-[-25%] lg:h-[125%]" />
         <div className="absolute inset-x-5 bottom-6 z-20 flex items-end justify-between gap-3 border-t border-white/40 pt-4 text-[8px] leading-relaxed font-extrabold tracking-[0.12em] text-white sm:inset-x-8 sm:text-[10px]">
           <span>THOUGHTFUL SYSTEMS.<br />DECISIVE EXECUTION.</span>
           <span className="font-normal tracking-normal text-[#eadcec]">Illustrative portrait</span>
