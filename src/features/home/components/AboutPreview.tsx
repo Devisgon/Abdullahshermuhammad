@@ -8,7 +8,8 @@ export function AboutPreview() {
   return <section className="py-20 md:py-28">
     <Container className="grid items-center gap-12 md:grid-cols-2 md:gap-20">
       <div className="flex min-h-[430px] flex-col items-center justify-center rounded-lg bg-[radial-gradient(circle_at_50%_40%,#812291,#40005b_70%)] text-white">
-        <span aria-label="ASM" className="inline-flex items-center text-[clamp(6rem,15vw,12rem)] leading-none font-extrabold tracking-[-0.1em]">
+        <span className="inline-flex items-center text-[clamp(6rem,15vw,12rem)] leading-none font-extrabold tracking-[-0.1em]">
+          <span className="sr-only">ASM</span>
           <span aria-hidden="true">A</span>
           <span aria-hidden="true" className="relative z-10 inline-block origin-center rotate-[8deg]">S</span>
           <span aria-hidden="true" className="-ml-[0.05em]">M</span>
