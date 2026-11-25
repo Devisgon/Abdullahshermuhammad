@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import type { Metadata } from 'next';
 import { createPageMetadata } from '@/lib/seo';
 import { PageIntro } from '@/components/ui/PageIntro';
@@ -7,6 +8,7 @@ export const metadata: Metadata = createPageMetadata({ title: 'AI Automation for
 
 export default function IndustriesPage() {
   return <main>
+    <Breadcrumbs items={[{ name: 'Industries', path: '/industries/' }]} />
     <PageIntro eyebrow="INDUSTRIES" title="Built around the work" highlight="your team actually does.">Every business has its own call types, tools and handoffs. Explore examples, then we can map a workflow for yours.</PageIntro>
     <IndustryDirectory />
   </main>;

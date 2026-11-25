@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const siteUrl = 'https://abdullahshermuhammad.me';
 export const siteName = 'Abdullah Sher Muhammad';
-export const socialImage = `${siteUrl}/images/og-image.png`;
+export const socialImage = `${siteUrl}/images/abdullah-sher-muhammad-ai-automation.webp`;
 
 type PageMetadata = {
   title: string;
@@ -17,6 +17,7 @@ export function createPageMetadata({ title, description, path }: PageMetadata): 
   return {
     title,
     description,
+    robots: { index: true, follow: true },
     alternates: { canonical: url },
     openGraph: {
       type: 'website',
@@ -25,7 +26,7 @@ export function createPageMetadata({ title, description, path }: PageMetadata): 
       siteName,
       title: socialTitle,
       description,
-      images: [{ url: socialImage, width: 1200, height: 630, alt: `${siteName} — AI automation and business systems`, type: 'image/png' }],
+      images: [{ url: socialImage, width: 1200, height: 630, alt: `${siteName} — AI automation and business systems`, type: 'image/webp' }],
     },
     twitter: {
       card: 'summary_large_image',

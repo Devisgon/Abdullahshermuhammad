@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import Link from 'next/link';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
@@ -10,14 +11,12 @@ export function ProjectDetail({ project }: { project: Project }) {
   const related = projects.filter(item => item.category === project.category && item.slug !== project.slug).slice(0, 3);
 
   return <main>
-    <Container className="pt-16 pb-24 md:pt-24">
-      <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm font-semibold text-muted">
-        <Link href="/case-studies/" className="hover:text-highlight">All projects</Link>
-        <span aria-hidden="true">/</span>
-        <Link href={`/case-studies/#${category.id}`} className="hover:text-highlight">{category.title}</Link>
-        <span aria-hidden="true">/</span>
-        <span aria-current="page" className="text-ink">Project {String(number).padStart(2, '0')}</span>
-      </nav>
+    <Breadcrumbs items={[
+      { name: 'Case studies', path: '/case-studies/' },
+      { name: category.title, path: `/case-studies/#${category.id}` },
+      { name: project.shortTitle, path: projectPath(project.slug) },
+    ]} />
+    <Container className="pb-24">
 
       <header className="mt-12 max-w-5xl">
         <p className="text-xs font-extrabold uppercase tracking-widest text-highlight">PROJECT {String(number).padStart(2, '0')} · {category.title}</p>

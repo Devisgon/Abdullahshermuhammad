@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import type { Metadata } from 'next';
 import { createPageMetadata } from '@/lib/seo';
 import { PageIntro } from '@/components/ui/PageIntro';
@@ -7,6 +8,7 @@ export const metadata: Metadata = createPageMetadata({ title: 'AI Automation Ser
 
 export default function ServicesPage() {
   return <main>
+    <Breadcrumbs items={[{ name: 'Services', path: '/services/' }]} />
     <PageIntro eyebrow="WHAT I BUILD" title="Choose the bottleneck." highlight="Build the next step.">These are starting points. The system itself is shaped around your team, existing tools and business rules.</PageIntro>
     <ServiceDirectory />
   </main>;

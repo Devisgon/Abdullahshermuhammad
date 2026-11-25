@@ -12,7 +12,7 @@ const directory = [
 export function IndustryDirectory() {
   return <section className="pb-24">
     <Container>
-      <div className="grid gap-5 md:grid-cols-2">{directory.map(([name, description, slug], index) => <FeatureCard key={slug} number={`0${index + 1} / INDUSTRY`} title={name} description={description} href={`/industries/${slug}`} label={`Explore ${name.toLowerCase()}`} />)}</div>
+      <div className="grid gap-5 md:grid-cols-2">{directory.map(([name, description, slug], index) => <FeatureCard heading="h2" key={slug} number={`0${index + 1} / INDUSTRY`} title={name} description={description} href={`/industries/${slug}`} label={`Explore ${name.toLowerCase()}`} />)}</div>
       <Callout title="Work in another industry?" description="Tell me where calls, leads or routine work get stuck. The first step is finding one useful workflow." />
     </Container>
   </section>;
