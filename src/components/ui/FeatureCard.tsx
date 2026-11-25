@@ -1,7 +1,8 @@
 import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
-export function FeatureCard({ number, title, description, href, label }: {
+export function FeatureCard({ number, title, description, href, label, heading: Heading = 'h3' }: {
+  heading?: 'h2' | 'h3';
   number: string;
   title: string;
   description: string;
@@ -10,7 +11,7 @@ export function FeatureCard({ number, title, description, href, label }: {
 }) {
   const content = <>
     <span className="text-xs font-extrabold tracking-widest text-highlight">{number}</span>
-    <h3 className="mt-7 text-2xl font-bold tracking-tight">{title}</h3>
+    <Heading className="mt-7 text-2xl font-bold tracking-tight">{title}</Heading>
     <p className="mt-4 flex-1 leading-relaxed text-muted">{description}</p>
     {href && <span className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-link">
       {label ?? 'Explore this workflow'}

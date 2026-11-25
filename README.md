@@ -31,11 +31,11 @@ public/                           # Logo, favicon, portraits and CNAME
 
 **Styling rule:** Put component styling in that component's Tailwind `className` attributes. `src/app/globals.css` contains only theme tokens and sitewide rules. Brand colors and font are in `@theme inline`; light and dark values are in `:root` and `html.dark`. There are no page or component CSS files. The header toggle saves a choice under `asm-theme` in browser storage and follows the system theme until a choice is saved.
 
-The header logo is `public/ASM-LOGO.png`. Homepage content begins in `src/app/(site)/page.tsx`, which imports named sections from `src/features/home/components/`. Change service copy in `src/content/offers.ts`, industry copy in `src/content/industries.ts`, and menu items in `src/content/navigation.ts`.
+The header logo is `public/images/abdullah-sher-muhammad-logo.webp`. Homepage content begins in `src/app/(site)/page.tsx`, which imports named sections from `src/features/home/components/`. Change service copy in `src/content/offers.ts`, industry copy in `src/content/industries.ts`, and menu items in `src/content/navigation.ts`.
 
 **Search content:** `src/content/seo-targets.ts` maps the distinct search intent and visible explanation for every service and industry landing page. `src/lib/seo.ts` builds canonical and social metadata; `src/app/sitemap.ts` and `src/app/robots.ts` expose discoverable URLs. The research, market limits and page-by-page keyword map are in `SEO_RESEARCH_REPORT.md`.
 
-**Social preview image:** Add a 1200 × 630 PNG named `og-image.png` at `public/images/og-image.png`. Every page uses that image for Open Graph and X/Twitter previews. Page titles, descriptions and canonical URLs are generated through `src/lib/seo.ts` and the page metadata. Preview images will not appear in shared links until this file is uploaded and deployed. The image URL is `https://abdullahshermuhammad.me/images/og-image.png`.
+**Social preview image:** The 1200 × 630 WebP at `public/images/abdullah-sher-muhammad-ai-automation.webp` supplies the Open Graph and X previews. Page metadata is generated through `src/lib/seo.ts`.
 
 ## Run locally
 

@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { industries } from '@/content/industries';
@@ -17,5 +18,8 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const industry = industries[slug];
   if (!industry) notFound();
-  return <IndustryPageView industry={industry} context={industrySearchTargets[slug]} />;
+  return <>
+    <Breadcrumbs items={[{ name: 'Industries', path: '/industries/' }, { name: industry.name, path: `/industries/${slug}/` }]} />
+    <IndustryPageView industry={industry} context={industrySearchTargets[slug]} />
+  </>;
 }

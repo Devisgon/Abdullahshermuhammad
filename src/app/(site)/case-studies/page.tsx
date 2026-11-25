@@ -1,3 +1,4 @@
+import { Breadcrumbs } from '@/components/seo/Breadcrumbs';
 import type { Metadata } from 'next';
 import { createPageMetadata } from '@/lib/seo';
 import { PageIntro } from '@/components/ui/PageIntro';
@@ -7,6 +8,7 @@ import { AutomationProjects } from '@/features/case-studies/components/Automatio
 export const metadata: Metadata = createPageMetadata({ title: 'Websites, Web Apps and Automation Projects', description: 'Explore 42 projects by Abdullah Sher Muhammad across websites, web apps, automations, AI workflows, scraping, integrations, webhooks and solution architecture.', path: '/case-studies/' });
 export default function CaseStudiesPage() {
   return <main>
+    <Breadcrumbs items={[{ name: 'Case studies', path: '/case-studies/' }]} />
     <PageIntro eyebrow="SELECTED WORK" title="Websites, apps and" highlight="automation projects.">Explore 42 projects across automations, AI automations, scraping, integrations, webhooks, solution architecture, websites and web apps. Open each project for its scope and tools. The university capstone below is in development.</PageIntro>
     <AutomationProjects />
     <CapstoneFeature />

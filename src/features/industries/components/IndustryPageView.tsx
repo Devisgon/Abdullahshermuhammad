@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { CalendarDays, Check, Phone, UserRoundCheck, ArrowUpRight } from 'lucide-react';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Callout } from '@/components/ui/Callout';
@@ -53,6 +54,7 @@ export function IndustryPageView({ industry, context }: { industry: Industry; co
             <h3 className="flex-1 text-lg font-bold">{use}</h3>
             <Check size={18} className="text-highlight" />
           </div>)}</div>
+        <p className="mt-8">Explore <Link href="/ai-receptionist/" className="font-semibold text-link underline">AI receptionist call handling</Link> and <Link href="/lead-follow-up/" className="font-semibold text-link underline">automated lead follow-up</Link> for these enquiries.</p>
         <Callout title="What happens when a customer reaches out and no one is free?" description="Tell me your current process and I’ll map where an automation could help." cta={industry.cta} />
       </Container>
     </section>

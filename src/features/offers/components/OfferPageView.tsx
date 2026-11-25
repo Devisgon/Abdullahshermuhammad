@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import { projectPath, type Project } from '@/content/projects';
 import { ArrowUpRight, Check } from 'lucide-react';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { Container } from '@/components/ui/Container';
@@ -8,7 +10,7 @@ import type { SearchTarget } from '@/content/seo-targets';
 import { SearchContext } from '@/components/ui/SearchContext';
 import { OfferVisual } from './OfferVisual';
 
-export function OfferPageView({ page, context }: { page: OfferPage; context: SearchTarget }) {
+export function OfferPageView({ page, context, project }: { page: OfferPage; context: SearchTarget; project?: Project }) {
   return <main>
     <section className="py-20 md:py-28">
       <Container className="grid items-center gap-12 lg:grid-cols-2">
@@ -47,6 +49,7 @@ export function OfferPageView({ page, context }: { page: OfferPage; context: Sea
             </span>)}</div>
         </div>
         <p className="mt-4 text-xs text-muted">{page.note}</p>
+        {project && <p className="mt-6">Related project · <Link className="font-semibold text-link underline" href={projectPath(project.slug)}>{project.shortTitle}</Link></p>}
         <div className="mt-16 rounded-lg bg-brand p-8 text-white md:p-12">
           <p className="text-xs font-extrabold tracking-widest text-[#e6b5dd]">YOUR WORKFLOW, NOT A GENERIC DEMO</p>
           <h2 className="mt-5 text-3xl font-bold md:text-4xl">Bring me the process.<br /><span className="text-[#e6b5dd]">I’ll map the first version.</span></h2>

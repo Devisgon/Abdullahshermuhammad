@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import { createPageMetadata, siteUrl } from '@/lib/seo';
+import { siteUrl } from '@/lib/seo';
 import './globals.css';
 
 const initializeTheme = `(function () {
@@ -16,11 +16,6 @@ const initializeTheme = `(function () {
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  ...createPageMetadata({
-    title: 'AI Automation Consultant for Service Businesses | Abdullah Sher Muhammad',
-    description: 'AI automation for service businesses: call handling, lead follow-up, CRM integration and connected workflows designed by Abdullah Sher Muhammad, founder of Devisgon.',
-    path: '/',
-  }),
   title: {
     default: 'AI Automation Consultant for Service Businesses | Abdullah Sher Muhammad',
     template: '%s | Abdullah Sher Muhammad',
@@ -29,8 +24,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Abdullah Sher Muhammad', url: siteUrl }],
   creator: 'Abdullah Sher Muhammad',
   publisher: 'Abdullah Sher Muhammad',
-  robots: { index: true, follow: true },
-  icons: { icon: '/favicon.svg', shortcut: '/favicon.svg' },
+  icons: { icon: '/abdullah-sher-muhammad-icon.webp', shortcut: '/abdullah-sher-muhammad-icon.webp' },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -38,7 +32,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <head>
       <meta name="msvalidate.01" content="7395FE97494B8D13871BB0B96853B25C" />
       <script dangerouslySetInnerHTML={{ __html: initializeTheme }} />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JJSES919J" />
       <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
@@ -46,7 +39,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </head>
     <body className="bg-surface font-sans text-ink antialiased">
       {children}
-      <Script id="microsoft-clarity" strategy="afterInteractive">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-6JJSES919J" strategy="afterInteractive" />
+      <Script id="microsoft-clarity" strategy="lazyOnload">
         {`(function(c,l,a,r,i,t,y){
           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
